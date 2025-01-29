@@ -11,7 +11,7 @@
   <div class="container">
     <div class="profile-card">
       <div class="profile-header">
-       <div>
+       <div class="profile-picture-container">
         <img
         src="/assets/mathias.jpg"
         alt="Profile Picture"
@@ -19,8 +19,12 @@
         id="profilePicture"
         data-testid="profilePicture"
       />
+      <label for="uploadPicture" class="upload-icon">
+        <i class="fas fa-camera"></i>
+      </label>
+      <input type="file" id="uploadPicture" class="file-input" accept="image/*"/>
        </div>
-        <input type="file" id="uploadPicture" class="file-input"/>
+        <!-- <input type="file" id="uploadPicture" class="file-input"/> -->
         <h1 class="full-name" data-testid="fullName">Mathias Chikaodili Ede</h1>
         <p class="job-title" data-testid="jobTitle">Frontend Developer</p>
       </div>
