@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Profile Card</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="profile-card">
+      <div class="profile-header">
+       <div>
+        <img
+        src="/assets/mathias.jpg"
+        alt="Profile Picture"
+        class="profile-picture"
+        id="profilePicture"
+        data-testid="profilePicture"
+      />
+       </div>
+        <input type="file" id="uploadPicture" class="file-input"/>
+        <h1 class="full-name" data-testid="fullName">Mathias Ede</h1>
+        <p class="job-title" data-testid="jobTitle">Frontend Developer</p>
+      </div>
+      <div class="profile-body">
+        <p class="greeting" id="greeting" data-testid="greeting"></p>
+        <p class="short-bio" id="shortBio" data-testid="shortBio">
+          I am a passionate Frontend Developer skilled in creating intuitive and user-friendly web applications. I thrive on bringing innovative ideas to life using modern web technologies.
+        </p>
+        <button id="toggleBio">Show/Hide Bio</button>
+        <p class="location" data-testid="currentLocation">Lagos, Nigeria</p>
+        <a href="mailto:xcoder2023@gmail.com" class="email" id="emailCopy" data-testid="emailAddress">
+          xcoder2023@gmail.com
+        </a>
+        <div class="social-links" data-testid="socialLinks">
+          <a href="https://www.linkedin.com/in/edemathiasdev" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+          <a href="https://github.com/Xcoder2023/" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+          <a href="https://x.com/mathybaba" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+        </div>
+        <p class="current-time" data-testid="currentTimeUTC"></p>
+        <p id="weather" data-testid="currentWeather">Fetching weather...</p>
+        <p id="birthdayCountdown" data-testid="birthdayCountdown"></p>
+      </div>
+      <div class="theme-switcher">
+        <label class="switch">
+          <input type="checkbox" id="themeSwitcher">
+          <span class="slider"></span>
+        </label>
+        <span id="themeLabel">Light Mode</span>
+      </div>
+      
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

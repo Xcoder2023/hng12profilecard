@@ -1,0 +1,233 @@
+/* Default (Light Mode) */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #ece9e6, #ffffff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.profile-card {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  overflow: hidden;
+  width: 100%;
+  max-width: 700px;
+}
+
+.profile-header {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  padding: 20px;
+  color: white;
+}
+
+.profile-picture {
+  border-radius: 50%;
+  border: 5px solid #ffffff;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.full-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px 0 5px;
+}
+
+.job-title {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.profile-body {
+  padding: 20px;
+}
+
+.short-bio {
+  font-size: 14px;
+  margin-bottom: 15px;
+  color: #555; /* Light mode text color */
+}
+
+.location,
+.email {
+  font-size: 14px;
+  margin: 5px 0;
+  color: #888;
+}
+
+.email {
+  text-decoration: none;
+  color: #007bff;
+  display: block;
+}
+
+.email:hover {
+  text-decoration: underline;
+}
+
+.social-links {
+  margin-top: 15px;
+}
+
+.social-links a {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 14px;
+  color: #6a11cb;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: #2575fc;
+}
+
+.social-links i {
+  margin-right: 5px;
+}
+
+.current-time {
+  font-size: 14px;
+  margin-top: 15px;
+  color: #888;
+}
+
+button, input {
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Dark Mode */
+body.dark-theme {
+  background-color: #333;
+  color: #fff; /* White text color for dark mode */
+}
+
+body.dark-theme .profile-card {
+  background: #444;
+  color: #fff; /* White text for the profile card */
+  box-shadow: none;
+}
+
+/* Dark Mode for Short Bio and Other Elements */
+body.dark-theme .short-bio {
+  color: #fff; /* White text for short bio */
+}
+
+body.dark-theme .location,
+body.dark-theme .email {
+  color: #bbb; /* Light gray color for location and email in dark mode */
+}
+
+body.dark-theme .social-links a {
+  color: #fff; /* White text for social links in dark mode */
+}
+
+body.dark-theme .social-links a:hover {
+  color: #007bff; /* Optionally change hover color */
+}
+
+/* Switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 25px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 19px;
+  width: 19px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #007bff;
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);  
+}
+
+.theme-switcher{
+  padding-bottom: 5px;
+}
+.file-input{
+  /* display: flex; */
+  justify-content: center;
+  padding: 2px;
+  border-radius: 16px;
+  position: relative;
+  left: 50px;
+}
+
+@media (max-width: 768px) {
+  .profile-picture {
+    width: 100px;
+    height: 100px;
+  }
+
+  .full-name {
+    font-size: 20px;
+  }
+
+  .job-title {
+    font-size: 14px;
+  }
+
+  .file-input{
+    /* display: flex; */
+    justify-content: center;
+    padding: 2px;
+    border-radius: 16px;
+    position: unset;
+    left: 0;
+  }
+}
