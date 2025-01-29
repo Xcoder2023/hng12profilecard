@@ -31,7 +31,7 @@ uploadPictureInput.addEventListener('change', (e) => {
   }
 });
 
-// Email Copy Functionality
+
 const emailElement = document.getElementById('emailCopy');
 emailElement.addEventListener('click', () => {
   const email = emailElement.textContent;
@@ -59,7 +59,7 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q=Lagos&appid=622f9feb6a5
   });
 
 
-// Birthday Countdown
+
 const birthdayCountdown = document.getElementById('birthdayCountdown');
 const birthday = new Date('2025-03-15');
 const updateCountdown = () => {
